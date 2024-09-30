@@ -55,6 +55,12 @@ img {
     scroll-margin-top: 152px;
 }
 
+#S4 {
+    color: white;
+    background-image: url("https://www.ucsd.edu/_resources/img/bg-orbs-1.jpg");
+    scroll-margin-top: 152px;
+}
+
 .FillerText {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
