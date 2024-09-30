@@ -5,6 +5,10 @@
     background-color: white;
 }
 
+img {
+    max-width:100%;
+}
+
 #navbar {
     position: sticky;
     top: 102px;
@@ -53,12 +57,12 @@
 
 .FillerText {
     display:grid;
-    grid-template-columns: (4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     grid-auto-rows:minmax(100px, auto);
 }
 
-.one {
+.ft-1 {
     display:block;
     background-color: #182b49;
     color: #f2f2f2;
@@ -68,7 +72,7 @@
     grid-row: 1/4;
 }
 
-.two {
+.ft-2 {
     display:block;
     background-color: #182b49;
     color: #f2f2f2;
@@ -78,7 +82,7 @@
     grid-row: 1/4;
 }
 
-.three {
+.ft-3 {
     display:block;
     background-color: #182b49;
     color: #f2f2f2;
@@ -88,7 +92,7 @@
     grid-row: 1/4;
 }
 
-.four {
+.ft-4 {
     display:block;
     background-color: #182b49;
     color: #f2f2f2;
@@ -96,4 +100,49 @@
     overflow:scroll;
     grid-column: 4;
     grid-row: 1/4;
+}
+
+@media screen and (max-width:800px) {
+    #navbar {
+        display:none;
+    }
+    #UCSDLogo img {
+        max-width:75%;
+    }
+    h2 {
+        font-size:24px;
+    }
+    p {
+        font-size:20px;
+    }
+    .FillerText {
+        display:grid;
+        gap: 25px 25px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ft-1 {
+        display:block;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        max-height: 250px;
+    }
+    .ft-2 {
+        display:block;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        max-height: 250px;
+    }
+    .ft-3 {
+        display: block;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        max-height: 250px;
+    }
+    .ft-4 {
+        display: block;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        max-height: 250px;
+    }
 }
